@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>機能紹介 — CQCQCQ</title>
+  <meta name="description" content="CQCQCQの機能を詳しく紹介。QSOロギング、QSLカード管理、JCC/JCG辞書、モールス変換、バンドプラン、ADIF/CSV入出力など。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </div>
+        CQCQCQ
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="features.html" class="active">機能</a></li>
+        <li><a href="docs.html">ドキュメント</a></li>
+        <li><a href="https://github.com/nobtaka/CQCQCQ" target="_blank">GitHub</a></li>
+      </ul>
+      <button class="nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>すべての機能</h1>
+    <p>アマチュア無線家のために設計された、充実の機能群をご紹介します。</p>
+  </section>
+
+  <!-- Feature Showcases -->
+  <section class="section">
+    <div class="section-inner">
+
+      <!-- QSO Logging -->
+      <div class="showcase">
+        <div class="showcase-text">
+          <span class="tag">コア機能</span>
+          <h3>QSOロギング</h3>
+          <p>コールサイン、RS（RST）レポート、周波数、モード、使用機材、送信出力など20以上のフィールドに対応。開始・終了時刻の記録、macOSではQSO詳細の別ウィンドウ表示も可能です。</p>
+          <p>周波数入力はコンボボックス方式で、登録済みプリセットの選択と自由入力の両方に対応。リストの文字サイズは ⌘+/⌘-/⌘0 で調整できます。</p>
+        </div>
+        <div class="showcase-image">
+          <div class="screenshot-placeholder">
+            <span>📋 QSOフォームのスクリーンショット<br>screenshots/mac-form.png</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- QSL Card -->
+      <div class="showcase reverse">
+        <div class="showcase-text">
+          <span class="tag">QSL管理</span>
+          <h3>QSLカード追跡</h3>
+          <p>QSLカードの送受信状況を交信ごとに管理。JARL経由、eQSL、ダイレクトなど送信方法ごとに追跡できます。</p>
+          <p>未完了のQSLだけをフィルタリングして表示する機能で、まだ送受信が完了していないQSLカードを一目で把握できます。</p>
+        </div>
+        <div class="showcase-image">
+          <div class="screenshot-placeholder">
+            <span>✉️ QSLフィルタのスクリーンショット<br>screenshots/qsl-filter.png</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dictionary -->
+      <div class="showcase">
+        <div class="showcase-text">
+          <span class="tag">リファレンス</span>
+          <h3>JCC/JCG辞書</h3>
+          <p>JARLのJCC（市）・JCG（郡）コードを内蔵辞書で検索。都道府県ごとの絞り込みとワンクリックコピーに対応しています。</p>
+          <p>Qコード、モールス符号（欧文・和文）、NATOフォネティックコードの辞書も搭載。運用中にさっと確認できる便利なリファレンスです。</p>
+        </div>
+        <div class="showcase-image">
+          <div class="screenshot-placeholder">
+            <span>📖 辞書ウィンドウのスクリーンショット<br>screenshots/dictionary.png</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Morse -->
+      <div class="showcase reverse">
+        <div class="showcase-text">
+          <span class="tag">ユーティリティ</span>
+          <h3>モールス変換・再生</h3>
+          <p>テキストをモールス符号に変換し、音声で再生。欧文モールスと和文モールスの両方に対応しています。</p>
+          <p>WPM（Words Per Minute）速度の調整、再生中のカラオケ風ハイライト表示、クリップボードへのコピーが可能。macOSでは ⌘⇧M でユーティリティウィンドウとして呼び出せます。</p>
+        </div>
+        <div class="showcase-image">
+          <div class="screenshot-placeholder">
+            <span>🔊 モールス変換のスクリーンショット</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search & Filter -->
+      <div class="showcase">
+        <div class="showcase-text">
+          <span class="tag">検索</span>
+          <h3>高度な検索・フィルタ</h3>
+          <p>Macではコールサイン、名前、QTH、周波数など複数フィールドの横断検索に対応。Finder風の折りたたみ式検索フィールドをツールバーに搭載し、スコープ切り替えやオートコンプリートも利用できます。</p>
+          <p>iOS/iPadでは機材、周波数、モード、期間、QSL状態による絞り込みが可能です。</p>
+        </div>
+        <div class="showcase-image">
+          <div class="screenshot-placeholder">
+            <span>🔍 検索・フィルタのスクリーンショット</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Band Plan -->
+      <div class="showcase reverse">
+        <div class="showcase-text">
+          <span class="tag">リファレンス</span>
+          <h3>バンドプラン</h3>
+          <p>日本のアマチュアバンドプランを内蔵表示。周波数帯ごとの使用区分を一覧で確認できます。</p>
+          <p>無線従事者の級別フィルタリングに対応し、自分の資格で使える周波数帯域をすぐに確認可能。macOSでは ⌘⇧B でユーティリティウィンドウとして利用できます。</p>
+        </div>
+        <div class="showcase-image">
+          <div class="screenshot-placeholder">
+            <span>📊 バンドプランのスクリーンショット</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Data Import/Export -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>データの入出力</h2>
+        <p>他のロギングソフトとのデータ交換も簡単。</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          </div>
+          <h3>ADIF インポート/エクスポート</h3>
+          <p>Amateur Data Interchange Format（ADIF）形式の読み書きに対応。他のロギングソフトとQSOデータを自在にやりとりできます。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          </div>
+          <h3>CSV インポート/エクスポート</h3>
+          <p>QSOデータのCSVエクスポート・インポートに対応。日本で広く使われるTurbo HAMLOG形式のCSV取り込みにも対応しています。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+          </div>
+          <h3>ファイル関連付け</h3>
+          <p>ADIFファイルをダブルクリックで直接CQCQCQで開くことが可能。シームレスなワークフローを実現します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Features Table -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>プラットフォーム別機能</h2>
+        <p>各デバイスの特性を活かした最適な体験を提供。</p>
+      </div>
+      <table class="docs-table">
+        <thead>
+          <tr>
+            <th>プラットフォーム</th>
+            <th>主な特徴</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>macOS</strong></td>
+            <td>NSToolbarカスタマイズ、Finder風検索フィールド、期間フィルタ、カラム並べ替え、辞書・モールス・バンドプランのユーティリティウィンドウ、QSO詳細ウィンドウ、文字サイズ変更、ステータスバー、キーボードショートカット</td>
+          </tr>
+          <tr>
+            <td><strong>iPad</strong></td>
+            <td>スプリットビュー、GPS連携、フィルタシート、PencilKit手書きメモパッド</td>
+          </tr>
+          <tr>
+            <td><strong>iPhone</strong></td>
+            <td>コンパクトなリスト表示、GPS連携、フィルタシート</td>
+          </tr>
+          <tr>
+            <td><strong>Apple Watch</strong></td>
+            <td>QSOログ一覧・詳細表示、新規QSO入力、スワイプ削除</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Roadmap Teaser -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2>今後の予定</h2>
+        <p>CQCQCQはさらに進化を続けます。</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
+          </div>
+          <h3>iCloud同期</h3>
+          <p>CloudKitによるデバイス間データ同期。Mac、iPhone、iPad、Apple Watch間でシームレスにQSOデータを共有。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </div>
+          <h3>QRZ.com連携</h3>
+          <p>コールサイン入力時にQRZ.com / HamQTH APIで名前やQTH、写真を自動取得。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+          </div>
+          <h3>統計ダッシュボード</h3>
+          <p>交信数の推移、バンド別・モード別のグラフ、時間帯別のヒートマップなどを可視化。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta-inner">
+      <h2>使ってみませんか？</h2>
+      <p>CQCQCQは無料でダウンロードできます。<br>あなたの交信記録を、もっと楽しく管理しましょう。</p>
+      <a href="#" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" style="fill: currentColor;"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        App Store からダウンロード
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">ホーム</a>
+        <a href="features.html">機能</a>
+        <a href="docs.html">ドキュメント</a>
+        <a href="https://github.com/nobtaka/CQCQCQ" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 CQCQCQ. 73 de the developer!</p>
+    </div>
+  </footer>
+
+</body>
+</html>

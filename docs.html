@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ドキュメント — CQCQCQ</title>
+  <meta name="description" content="CQCQCQの使い方ガイド、インストール方法、キーボードショートカット、データ入出力、FAQ。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </div>
+        CQCQCQ
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="features.html">機能</a></li>
+        <li><a href="docs.html" class="active">ドキュメント</a></li>
+        <li><a href="https://github.com/nobtaka/CQCQCQ" target="_blank">GitHub</a></li>
+      </ul>
+      <button class="nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>ドキュメント</h1>
+    <p>CQCQCQの使い方、設定方法、よくある質問をまとめています。</p>
+  </section>
+
+  <!-- Docs Content -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="docs-layout">
+
+        <!-- Sidebar -->
+        <aside class="docs-sidebar">
+          <ul>
+            <li><a href="#getting-started" class="active">はじめに</a></li>
+            <li><a href="#installation">インストール</a></li>
+            <li><a href="#qso-logging">QSOの記録</a></li>
+            <li><a href="#search-filter">検索・フィルタ</a></li>
+            <li><a href="#dictionary">辞書機能</a></li>
+            <li><a href="#morse">モールス変換</a></li>
+            <li><a href="#bandplan">バンドプラン</a></li>
+            <li><a href="#data-io">データ入出力</a></li>
+            <li><a href="#settings">設定</a></li>
+            <li><a href="#shortcuts">ショートカット</a></li>
+            <li><a href="#requirements">動作環境</a></li>
+            <li><a href="#build">ビルド方法</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </aside>
+
+        <!-- Content -->
+        <div class="docs-content">
+
+          <h2 id="getting-started">はじめに</h2>
+          <p>CQCQCQは、アマチュア無線の交信記録（QSO）を管理するためのネイティブアプリです。Mac、iPhone、iPad、Apple Watchに対応し、Apple純正フレームワーク（SwiftUI、SwiftData、AppKit、CoreLocation）のみで構築されています。</p>
+          <p>サードパーティライブラリやクロスプラットフォームフレームワークは一切使用していないため、各プラットフォームの特性を最大限に活かした、軽量で高速な動作を実現しています。</p>
+
+          <h2 id="installation">インストール</h2>
+          <p>App Storeからダウンロードしてインストールできます。Mac、iPhone、iPad、Apple Watchそれぞれに最適化されたユニバーサルアプリです。</p>
+
+          <h2 id="qso-logging">QSOの記録</h2>
+          <p>CQCQCQでは、以下のフィールドを使って交信を記録できます。</p>
+          <ul>
+            <li><strong>コールサイン</strong> — 交信相手のコールサイン</li>
+            <li><strong>RS / RST レポート</strong> — 受信・送信のシグナルレポート</li>
+            <li><strong>周波数</strong> — 使用周波数（コンボボックスでプリセット選択 or 自由入力）</li>
+            <li><strong>モード</strong> — CW、SSB、FM、FT8 など</li>
+            <li><strong>使用機材</strong> — リグ・アンテナなどの情報</li>
+            <li><strong>送信出力</strong> — TX パワー</li>
+            <li><strong>開始/終了時刻</strong> — QSOの開始時刻と終了時刻</li>
+            <li><strong>QTH</strong> — 相手局の所在地</li>
+            <li><strong>名前</strong> — 交信相手のオペレータ名</li>
+            <li><strong>備考</strong> — 自由記述のメモ欄</li>
+          </ul>
+          <p>macOSでは、リスト上のQSOをダブルクリックすると詳細ウィンドウが開きます。</p>
+
+          <h2 id="search-filter">検索・フィルタ</h2>
+          <h3>macOS</h3>
+          <p>ツールバーに統合されたFinder風の検索フィールドを使用します。クリックで展開、Escキーで収縮します。コールサイン、名前、QTH、周波数など複数のフィールドを横断検索できます。スコープの切り替えやオートコンプリートにも対応しています。</p>
+          <h3>iOS / iPad</h3>
+          <p>フィルタシートから、使用機材、周波数、モード、期間、QSL状態で絞り込みが可能です。</p>
+
+          <h2 id="dictionary">辞書機能</h2>
+          <p>内蔵辞書として以下のリファレンスを搭載しています。</p>
+          <ul>
+            <li><strong>JCC/JCG辞書</strong> — 日本の市（JCC）・郡（JCG）コードを都道府県で絞り込み検索。コードのワンクリックコピーに対応。</li>
+            <li><strong>Qコード辞書</strong> — アマチュア無線で使用される主要なQコードのリファレンス</li>
+            <li><strong>モールス符号表</strong> — 欧文モールスと和文モールス（ワブン）の一覧</li>
+            <li><strong>フォネティックコード</strong> — NATOフォネティックアルファベット</li>
+          </ul>
+
+          <h2 id="morse">モールス変換</h2>
+          <p>テキストをモールス符号に変換し、音声で再生できるユーティリティです。</p>
+          <ul>
+            <li>欧文モールス・和文モールスに対応</li>
+            <li>WPM（Words Per Minute）速度の調整</li>
+            <li>再生中のカラオケ風ハイライト表示</li>
+            <li>クリップボードへのコピー</li>
+          </ul>
+          <p>macOSでは <code>⌘⇧M</code> でユーティリティウィンドウとして開けます。iOS/iPadでは設定画面からアクセスできます。</p>
+
+          <h2 id="bandplan">バンドプラン</h2>
+          <p>日本のアマチュアバンドプランを内蔵表示します。周波数帯ごとの使用区分を一覧で確認でき、無線従事者の級別フィルタリングにも対応しています。</p>
+          <p>macOSでは <code>⌘⇧B</code> でユーティリティウィンドウとして開けます。</p>
+
+          <h2 id="data-io">データ入出力</h2>
+          <h3>ADIF（Amateur Data Interchange Format）</h3>
+          <p>ADIF形式でのインポート・エクスポートに対応しています。他のロギングソフト（RUMlogNG、QSOMateなど）とのデータ交換が可能です。ADIFファイルはダブルクリックでCQCQCQに直接読み込めます。</p>
+          <h3>CSV</h3>
+          <p>QSOデータのCSVエクスポート・インポートに対応しています。日本国内で広く使われるTurbo HAMLOG形式のCSV取り込みにも対応しています。</p>
+
+          <h2 id="settings">設定</h2>
+          <p>以下の項目をカスタマイズできます。</p>
+          <ul>
+            <li>表示する周波数帯の選択</li>
+            <li>使用モードの選択</li>
+            <li>使用機材のリスト管理</li>
+            <li>QTH（運用地）のリスト管理</li>
+            <li>QSL送信方法の設定</li>
+            <li>自局コールサイン・名前の設定</li>
+            <li>表示項目のカスタマイズ</li>
+          </ul>
+
+          <h2 id="shortcuts">キーボードショートカット（macOS）</h2>
+          <table class="docs-table">
+            <thead>
+              <tr>
+                <th>ショートカット</th>
+                <th>機能</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>⌘⇧M</code></td><td>モールス変換ウィンドウを開く</td></tr>
+              <tr><td><code>⌘⇧B</code></td><td>バンドプランウィンドウを開く</td></tr>
+              <tr><td><code>⌘+</code></td><td>リストの文字サイズを拡大</td></tr>
+              <tr><td><code>⌘-</code></td><td>リストの文字サイズを縮小</td></tr>
+              <tr><td><code>⌘0</code></td><td>リストの文字サイズをリセット</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="requirements">動作環境</h2>
+          <table class="docs-table">
+            <thead>
+              <tr>
+                <th>プラットフォーム</th>
+                <th>最低バージョン</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>macOS</td><td>15.0 (Sequoia) 以上</td></tr>
+              <tr><td>iOS</td><td>18.0 以上</td></tr>
+              <tr><td>iPadOS</td><td>18.0 以上</td></tr>
+              <tr><td>watchOS</td><td>11.0 以上</td></tr>
+              <tr><td>Xcode（ビルド）</td><td>16.0 以上</td></tr>
+            </tbody>
+          </table>
+
+          <h2 id="build">ビルド方法</h2>
+          <p>ソースコードからビルドする場合は以下の手順で行います。</p>
+          <pre><code>git clone https://github.com/nobtaka/CQCQCQ.git
+cd CQCQCQ
+open CQCQCQ.xcodeproj</code></pre>
+          <p>Xcodeでターゲットプラットフォーム（Mac / iPhone / iPad / Apple Watch）を選択してビルド・実行してください。</p>
+
+          <h2 id="faq">FAQ</h2>
+
+          <h3>Q: サードパーティライブラリは使っていますか？</h3>
+          <p>いいえ。CQCQCQはApple純正フレームワーク（SwiftUI、SwiftData、AppKit、CoreLocation、AVFoundation、PencilKit、WatchKit）のみで構築されています。</p>
+
+          <h3>Q: iCloud同期はできますか？</h3>
+          <p>現在開発中です。CloudKitによるデバイス間データ同期は、ロードマップのフェーズ1として計画されています。</p>
+
+          <h3>Q: Apple Watch単体で使えますか？</h3>
+          <p>はい。Apple Watch版ではQSOログの一覧・詳細表示、新規QSO入力、スワイプ削除が可能です。</p>
+
+          <h3>Q: HAMLOG のデータを取り込めますか？</h3>
+          <p>はい。Turbo HAMLOG形式のCSVファイルのインポートに対応しています。</p>
+
+          <h3>Q: 英語UIは対応していますか？</h3>
+          <p>多言語対応はロードマップに含まれていますが、現時点では日本語UIが中心です。</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">ホーム</a>
+        <a href="features.html">機能</a>
+        <a href="docs.html">ドキュメント</a>
+        <a href="https://github.com/nobtaka/CQCQCQ" target="_blank">GitHub</a>
+      </div>
+      <p>&copy; 2026 CQCQCQ. 73 de the developer!</p>
+    </div>
+  </footer>
+
+  <!-- Smooth scroll for sidebar links -->
+  <script>
+    document.querySelectorAll('.docs-sidebar a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        document.querySelectorAll('.docs-sidebar a').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Highlight current section on scroll
+    const sections = document.querySelectorAll('.docs-content h2[id]');
+    const sidebarLinks = document.querySelectorAll('.docs-sidebar a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 100;
+        if (scrollY >= top) {
+          current = section.getAttribute('id');
+        }
+      });
+      sidebarLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
