@@ -166,6 +166,7 @@ CQCQCQ is a solo project — designed, developed, and maintained entirely by [@N
 
 - **X (App)**: [@CQCQCQApp](https://x.com/CQCQCQApp)
 - **X (Developer)**: [@NobtakaJP](https://x.com/NobtakaJP)
+- **Feedback / フィードバック**: [GitHub Issues](https://github.com/nobtaka/CQCQCQ-web/issues)
 
 ---
 
