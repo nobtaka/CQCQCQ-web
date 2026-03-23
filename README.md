@@ -158,6 +158,17 @@ See [ROADMAP.md](ROADMAP.md) for planned features and development roadmap.
 
 ---
 
+## Developer / 開発者
+
+CQCQCQ は [@NobtakaJP](https://x.com/NobtakaJP) が設計・開発・デザインまですべて1人で手がけている個人プロジェクトです。
+
+CQCQCQ is a solo project — designed, developed, and maintained entirely by [@NobtakaJP](https://x.com/NobtakaJP).
+
+- **X (App)**: [@CQCQCQApp](https://x.com/CQCQCQApp)
+- **X (Developer)**: [@NobtakaJP](https://x.com/NobtakaJP)
+
+---
+
 ## License / ライセンス
 
 Private project.
