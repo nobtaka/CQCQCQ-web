@@ -66,6 +66,19 @@ body {
   line-height: 1.6;
 }
 
+.coming-soon {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #0055DD;
+  background: rgba(0, 85, 221, 0.1);
+  border: 1px solid rgba(0, 85, 221, 0.25);
+  border-radius: 100px;
+}
+
 .screenshot {
   width: 100%;
   max-width: 1000px;
